@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yerbas del Sur — Patagonia Argentina</title>
+
+<!-- SEO -->
+<meta name="description" content="Emprendimiento familiar de venta de yerba mate en Rawson, Chubut. Las mejores marcas al mejor precio: Rey Verde, Canarias, Sara, Baldo y más. Pedí por WhatsApp o Instagram.">
+<meta name="keywords" content="yerba mate, Rawson, Chubut, Patagonia, Rey Verde, Canarias, Sara, Baldo, Verdecita, Pindaré, venta yerba">
+<meta name="author" content="Yerbas del Sur">
+
+<!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yerbas del Sur — La yerba que te llega al alma 🧉">
+<meta property="og:description" content="Las mejores marcas de yerba mate desde Rawson, Patagonia. Precios justos, entrega rápida. Rey Verde, Canarias, Sara, Baldo y más. ¡Consultanos por WhatsApp!">
+<meta property="og:image" content="https://raw.githubusercontent.com/placeholder/og-image.jpg">
+<!-- ☝️ Reemplazá esa URL por una foto real del producto o del logo -->
+<meta property="og:url" content="https://yerbasdelsur.com.ar">
+<!-- ☝️ Reemplazá por la URL real de tu página cuando la subas -->
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Yerbas del Sur">
+
+<!-- WhatsApp usa og:image, og:title y og:description de arriba -->
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yerbas del Sur — La yerba que te llega al alma 🧉">
+<meta name="twitter:description" content="Las mejores marcas de yerba mate desde Rawson, Patagonia. Precios justos, entrega rápida.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/placeholder/og-image.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧉</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Jost:wght@300;400;500;600&family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f5f0e8;
+  --parchment: #ede5d0;
+  --brown: #3d2b1f;
+  --brown-mid: #6b4226;
+  --green-dark: #1e3d2f;
+  --green: #2d5a3d;
+  --green-light: #4a7c5a;
+  --gold: #c9923a;
+  --gold-light: #e8b660;
+  --text: #2a1f15;
+  --muted: #7a6555;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== TEXTURE OVERLAY ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4rem;
+  background: rgba(245,240,232,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(61,43,31,0.1);
+  transition: padding 0.3s;
+}
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.nav-brand .top {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--green-dark);
+  letter-spacing: 0.05em;
+}
+.nav-brand .sub {
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--green); }
+.nav-cta {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: var(--green);
+  padding: 0.7rem 1.6rem;
+  text-decoration: none;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+}
+.nav-cta:hover { background: var(--green-dark); }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(45,90,61,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 10% 80%, rgba(201,146,58,0.08) 0%, transparent 50%),
+    var(--cream);
+}
+
+/* Decorative leaf SVG top right */
+.leaf-deco {
+  position: absolute;
+  right: -40px;
+  top: 60px;
+  width: 480px;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.leaf-deco-2 {
+  position: absolute;
+  left: -60px;
+  bottom: 0;
+  width: 320px;
+  opacity: 0.05;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 8vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text { }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.2s forwards;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--gold);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--green-dark);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.35s forwards;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.5s forwards;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.65s forwards;
+}
+
+.btn-green {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: var(--green);
+  padding: 1rem 2.2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid var(--green);
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+}
+.btn-green:hover { background: var(--green-dark); border-color: var(--green-dark); }
+.btn-ghost {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--green);
+  background: transparent;
+  padding: 1rem 2.2rem;
+  text-decoration: none;
+  border: 2px solid rgba(45,90,61,0.3);
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+}
+.btn-ghost:hover { border-color: var(--green); }
+
+/* Mate illustration area */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s 0.8s forwards;
+}
+.hero-badge {
+  width: 340px; height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #3a6b4a, #1a3828);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(30,61,47,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.hero-badge::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1px dashed rgba(201,146,58,0.35);
+}
+.hero-badge::after {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,146,58,0.12);
+}
+.badge-icon { font-size: 4rem; margin-bottom: 0.5rem; }
+.badge-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 1.1;
+}
+.badge-sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-top: 0.5rem;
+}
+.badge-price-badge {
+  position: absolute;
+  bottom: 30px; right: -20px;
+  background: var(--gold);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transform: rotate(8deg);
+  box-shadow: 0 8px 24px rgba(201,146,58,0.4);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 8vw;
+  margin: 0;
+}
+.divider-line { flex: 1; height: 1px; background: rgba(61,43,31,0.12); }
+.divider-icon { color: var(--gold); font-size: 1.2rem; }
+
+/* ===== NOSOTROS ===== */
+#nosotros {
+  padding: 7rem 8vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  background: var(--parchment);
+  position: relative;
+  overflow: hidden;
+}
+#nosotros::before {
+  content: '"';
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 30rem;
+  color: rgba(45,90,61,0.04);
+  top: -5rem;
+  left: 4vw;
+  line-height: 1;
+  pointer-events: none;
+}
+.nosotros-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.nosotros-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 900;
+  color: var(--green-dark);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.nosotros-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+.nosotros-quote {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--green);
+  border-left: 3px solid var(--gold);
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  line-height: 1.7;
+}
+.nosotros-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.stat-box {
+  background: var(--cream);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: background 0.3s;
+}
+.stat-box:hover { background: var(--green-dark); }
+.stat-box:hover .stat-num,
+.stat-box:hover .stat-label { color: white; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--green);
+  line-height: 1;
+  transition: color 0.3s;
+}
+.stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* ===== CATALOGO ===== */
+#catalogo {
+  padding: 7rem 8vw;
+  position: relative;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-label-center {
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-label-center::before, .section-label-center::after {
+  content: '✦';
+  font-size: 0.5rem;
+}
+.section-title-center {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--green-dark);
+  line-height: 1.05;
+}
+.section-title-center em { font-style: italic; color: var(--gold); }
+
+/* Filter tabs */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid rgba(61,43,31,0.2);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Jost', sans-serif;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5px;
+}
+.product-card {
+  background: var(--parchment);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  cursor: pointer;
+}
+.product-card:hover { transform: translateY(-6px); z-index: 2; box-shadow: 0 20px 50px rgba(30,61,47,0.15); }
+.product-card:hover .product-overlay { opacity: 1; }
+.product-card:hover .product-img-area { transform: scale(1.04); }
+
+.product-img-area {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  transition: transform 0.5s;
+  position: relative;
+}
+
+/* Individual product colors */
+.p-canarias .product-img-area { background: linear-gradient(135deg, #f5e840 0%, #d4c820 100%); }
+.p-baldo .product-img-area { background: linear-gradient(135deg, #1a6b2a 0%, #0d3d16 100%); }
+.p-sara .product-img-area { background: linear-gradient(135deg, #1a2d8a 0%, #0d1a5a 100%); }
+.p-rv-clasica .product-img-area { background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%); }
+.p-rv-tradicional .product-img-area { background: linear-gradient(135deg, #f5e840 0%, #c8c010 100%); }
+.p-rv-premium .product-img-area { background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); }
+.p-verdecita .product-img-area { background: linear-gradient(135deg, #5aad40 0%, #2a6a18 100%); }
+.p-pindare .product-img-area { background: linear-gradient(135deg, #e8e820 0%, #b0b010 100%); }
+
+.product-emoji {
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30,61,47,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.overlay-btn {
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s;
+}
+.overlay-btn:hover { background: white; color: var(--green-dark); }
+
+.product-body {
+  padding: 1.5rem;
+  border-top: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+.product-card:hover .product-body { border-color: var(--gold); }
+
+.product-brand {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brown);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+.product-weight {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(61,43,31,0.1);
+}
+.product-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--green);
+}
+.product-price small {
+  font-size: 0.8rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  color: var(--muted);
+}
+.whatsapp-btn {
+  width: 36px; height: 36px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.whatsapp-btn:hover { transform: scale(1.15); box-shadow: 0 4px 14px rgba(37,211,102,0.4); }
+
+/* ===== BANNER ===== */
+#banner {
+  padding: 5rem 8vw;
+  background: var(--green-dark);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+#banner::before {
+  content: '🧉';
+  position: absolute;
+  font-size: 20rem;
+  right: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.06;
+  pointer-events: none;
+}
+.banner-text .eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.banner-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.banner-text h2 em { font-style: italic; color: var(--gold-light); }
+.banner-text p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 500px;
+}
+.banner-action a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--green-dark);
+  background: var(--gold-light);
+  padding: 1.2rem 2.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+.banner-action a:hover { background: white; }
+
+/* ===== HORARIOS ===== */
+#horarios {
+  padding: 7rem 8vw;
+  background: var(--parchment);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+.horarios-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: var(--green-dark);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.horarios-sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+.schedule-items { display: flex; flex-direction: column; gap: 1px; }
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: var(--cream);
+  transition: background 0.3s;
+}
+.schedule-item:hover { background: var(--green-dark); }
+.schedule-item:hover .sched-days,
+.schedule-item:hover .sched-time { color: white; }
+.schedule-item:hover .sched-dot { background: var(--gold-light); }
+.sched-left { display: flex; align-items: center; gap: 1rem; }
+.sched-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+.sched-days {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.3s;
+}
+.sched-time {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green);
+  transition: color 0.3s;
+}
+
+.contact-box {
+  background: var(--cream);
+  padding: 3rem;
+  border-top: 3px solid var(--gold);
+}
+.contact-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--green-dark);
+  margin-bottom: 0.8rem;
+}
+.contact-box p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(61,43,31,0.12);
+  transition: all 0.3s;
+}
+.contact-link:hover { border-color: var(--green); color: var(--green); background: rgba(45,90,61,0.03); }
+.contact-link .icon { font-size: 1.1rem; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--brown);
+  padding: 4rem 8vw 2.5rem;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 2rem;
+}
+.footer-brand .name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+.footer-brand .tagline {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.2rem;
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 300px;
+}
+.footer-col h4 {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+.footer-col a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--gold-light); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copy {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.2);
+  font-weight: 300;
+}
+.ig-link {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.ig-link:hover { color: white; }
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 90;
+  width: 60px; height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: waPulse 2.5s infinite;
+}
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 36px rgba(37,211,102,0.5); }
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 8px 28px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.08); }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ===== CART NAV BTN ===== */
+.cart-nav-btn {
+  position: relative;
+  background: transparent;
+  border: 1.5px solid rgba(61,43,31,0.25);
+  font-size: 1.05rem;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s;
+  font-family: 'Jost', sans-serif;
+  color: var(--text);
+}
+.cart-nav-btn:hover { border-color: var(--green); color: var(--green); }
+.cart-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--green);
+  color: white;
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  min-width: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.cart-count.bump { transform: scale(1.4); }
+
+/* ===== CART OVERLAY ===== */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30,30,20,0.45);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+.cart-overlay.open { opacity: 1; pointer-events: all; }
+
+/* ===== CART DRAWER ===== */
+.cart-drawer {
+  position: fixed;
+  top: 0; right: 0;
+  width: 420px;
+  max-width: 100vw;
+  height: 100vh;
+  background: var(--cream);
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.38s cubic-bezier(0.25,0.46,0.45,0.94);
+  box-shadow: -12px 0 60px rgba(30,61,47,0.12);
+}
+.cart-drawer.open { transform: translateX(0); }
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 2rem;
+  border-bottom: 1px solid rgba(61,43,31,0.1);
+  background: var(--parchment);
+}
+.cart-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--green-dark);
+}
+.cart-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 0.3rem 0.6rem;
+  transition: color 0.2s;
+}
+.cart-close:hover { color: var(--brown); }
+
+.cart-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+}
+.cart-empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 3rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(61,43,31,0.08);
+}
+.cart-item-emoji { font-size: 1.8rem; flex-shrink: 0; }
+.cart-item-info { flex: 1; min-width: 0; }
+.cart-item-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brown);
+  line-height: 1.2;
+}
+.cart-item-price {
+  font-size: 0.8rem;
+  color: var(--green);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.qty-btn {
+  width: 28px; height: 28px;
+  border: 1.5px solid rgba(61,43,31,0.2);
+  background: white;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.2s;
+  font-family: 'Jost', sans-serif;
+}
+.qty-btn:hover { border-color: var(--green); color: var(--green); }
+.qty-num {
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 22px;
+  text-align: center;
+  color: var(--text);
+}
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: #c0a0a0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.3rem;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+.cart-item-remove:hover { color: #b33; }
+
+/* Cart Footer */
+.cart-footer {
+  padding: 1.5rem 2rem 2rem;
+  border-top: 1px solid rgba(61,43,31,0.1);
+  background: var(--parchment);
+}
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.cart-total-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--green);
+}
+.cart-disclaimer {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+.cart-wa-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #25d366;
+  color: white;
+  border: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 0.6rem;
+}
+.cart-wa-btn:hover { background: #1aaf55; }
+.cart-clear-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  color: var(--muted);
+  border: 1.5px solid rgba(61,43,31,0.15);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.cart-clear-btn:hover { border-color: #b33; color: #b33; }
+
+/* Added feedback on product cards */
+.product-card.added-to-cart .product-body { border-color: var(--green) !important; }
+
+@media (max-width: 900px) {
+  nav { padding: 1rem 2rem; }
+  .nav-links { display: none; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  #nosotros { grid-template-columns: 1fr; gap: 3rem; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  #banner { grid-template-columns: 1fr; }
+  #horarios { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp flotante -->
+<a class="wa-float" href="https://wa.me/5492235376372" target="_blank" title="Consultanos por WhatsApp">💬</a>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <span class="top">🧉 Yerbas del Sur</span>
+    <span class="sub">Patagonia Argentina</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="javascript:void(0)" onclick="irA('nosotros')">Nosotros</a></li>
+    <li><a href="javascript:void(0)" onclick="irA('catalogo')">Catálogo</a></li>
+    <li><a href="javascript:void(0)" onclick="irA('horarios')">Horarios</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <button class="cart-nav-btn" onclick="toggleCart()" title="Ver carrito">
+      🛒 <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <div class="cart-title">🛒 Tu pedido</div>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty" id="cart-empty">
+      <div style="font-size:3rem;margin-bottom:1rem;">🧉</div>
+      <p>Tu carrito está vacío.<br>Agregá yerbas desde el catálogo.</p>
+    </div>
+    <div id="cart-items"></div>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total-row">
+      <span>Total estimado</span>
+      <span class="cart-total-price" id="cart-total">$0</span>
+    </div>
+    <p class="cart-disclaimer">* Los precios son orientativos. El total final se confirma por WhatsApp.</p>
+    <button class="cart-wa-btn" onclick="sendToWhatsApp()">
+      💬 Pedir por WhatsApp
+    </button>
+    <button class="cart-clear-btn" onclick="clearCart()">
+      🗑️ Vaciar carrito
+    </button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <!-- Leaf decorations -->
+  <svg class="leaf-deco" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200 20 C280 80 380 200 350 350 C320 500 180 580 100 520 C20 460 10 300 80 180 C120 100 160 40 200 20Z" fill="#2d5a3d"/>
+    <path d="M200 20 L200 540" stroke="#1e3d2f" stroke-width="3"/>
+    <path d="M200 100 C240 120 280 160 300 200" stroke="#1e3d2f" stroke-width="1.5"/>
+    <path d="M200 180 C240 200 270 240 280 280" stroke="#1e3d2f" stroke-width="1.5"/>
+    <path d="M200 260 C230 280 250 310 260 350" stroke="#1e3d2f" stroke-width="1.5"/>
+    <path d="M200 100 C160 120 120 160 100 200" stroke="#1e3d2f" stroke-width="1.5"/>
+    <path d="M200 180 C160 200 130 240 120 280" stroke="#1e3d2f" stroke-width="1.5"/>
+  </svg>
+  <svg class="leaf-deco-2" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200 20 C280 80 380 200 350 350 C320 500 180 580 100 520 C20 460 10 300 80 180 C120 100 160 40 200 20Z" fill="#c9923a"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Rawson, Chubut · Patagonia Argentina</div>
+      <h1 class="hero-title">
+        La yerba que<br>
+        te <em>llega</em> al<br>
+        alma
+      </h1>
+      <p class="hero-desc">Traemos las mejores marcas de yerba mate directamente a tu puerta. Calidad garantizada, precios justos y la calidez patagónica en cada bolsa.</p>
+      <div class="hero-actions">
+        <button onclick="irA('catalogo')" class="btn-green">Ver catálogo</button>
+        <button onclick="irA('horarios')" class="btn-ghost">Horarios</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-badge">
+        <div class="badge-icon">🧉</div>
+        <div class="badge-title">Yerbas<br>del Sur</div>
+        <div class="badge-sub">Patagonia Argentina</div>
+        <div class="badge-price-badge">Desde $5.100</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider"><div class="divider-line"></div><div class="divider-icon">✦</div><div class="divider-line"></div></div>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="reveal">
+    <p class="nosotros-label">✦ Quiénes somos</p>
+    <h2 class="nosotros-title">Nacimos del<br>amor al mate</h2>
+    <p class="nosotros-body">Yerbas del Sur es un emprendimiento familiar nacido en Rawson, Chubut, en el corazón de la Patagonia argentina. Lo que empezó como una pasión por conseguir la mejor yerba para el mate de cada día se convirtió en un proyecto de vida.</p>
+    <p class="nosotros-body">Trabajamos directamente con las marcas más reconocidas del mercado para ofrecerte siempre el mejor precio sin sacrificar calidad. Porque en el sur sabemos que el mate no es solo una bebida — es una forma de encontrarse.</p>
+    <blockquote class="nosotros-quote">"No vendemos yerba, vendemos el momento del mate. Ese instante en que todo se detiene y uno respira."</blockquote>
+  </div>
+  <div class="nosotros-stats reveal" style="transition-delay:0.15s">
+    <div class="stat-box">
+      <div class="stat-num">8+</div>
+      <div class="stat-label">Marcas disponibles</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Producto original</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">500g</div>
+      <div class="stat-label">Presentación estándar</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">6d</div>
+      <div class="stat-label">Atención semanal</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGO -->
+<section id="catalogo">
+  <div class="section-header reveal">
+    <p class="section-label-center">Nuestros productos</p>
+    <h2 class="section-title-center">Catálogo de <em>yerbas</em></h2>
+  </div>
+
+  <div class="filter-tabs reveal">
+    <button class="tab-btn active" onclick="filterProducts('all', this)">Todas</button>
+    <button class="tab-btn" onclick="filterProducts('rey-verde', this)">Rey Verde</button>
+    <button class="tab-btn" onclick="filterProducts('otras', this)">Otras marcas</button>
+  </div>
+
+  <div class="products-grid reveal" id="products-grid">
+
+    <div class="product-card p-canarias" data-cat="otras" data-name="Canarias 500g" data-price="6600">
+      <div class="product-img-area">
+        <div class="product-emoji">🟡</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Yerba Mate</div>
+        <div class="product-name">Canarias</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>6.600</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Canarias%20500g" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-baldo" data-cat="otras" data-name="Baldo 500g" data-price="7800">
+      <div class="product-img-area">
+        <div class="product-emoji">🟢</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Yerba Mate</div>
+        <div class="product-name">Baldo</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>7.800</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Baldo%20500g" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-sara" data-cat="otras" data-name="Sara Original 500g" data-price="8500">
+      <div class="product-img-area">
+        <div class="product-emoji">🔵</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Yerba Mate · Extra Suave</div>
+        <div class="product-name">Sara Original</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>8.500</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Sara%20Original%20500g" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-rv-clasica" data-cat="rey-verde" data-name="Rey Verde Clásica 500g" data-price="5500">
+      <div class="product-img-area">
+        <div class="product-emoji">⚪</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Rey Verde Export</div>
+        <div class="product-name">Clásica</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>5.500</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Rey%20Verde%20Clasica" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-rv-tradicional" data-cat="rey-verde" data-name="Rey Verde Tradicional 500g" data-price="5700">
+      <div class="product-img-area">
+        <div class="product-emoji">🟡</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Rey Verde Export</div>
+        <div class="product-name">Tradicional</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>5.700</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Rey%20Verde%20Tradicional" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-rv-premium" data-cat="rey-verde" data-name="Rey Verde Premium 500g" data-price="7000">
+      <div class="product-img-area">
+        <div class="product-emoji">⬛</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Rey Verde Export</div>
+        <div class="product-name">Premium</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>7.000</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Rey%20Verde%20Premium" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-verdecita" data-cat="otras" data-name="Verdecita 500g" data-price="5100">
+      <div class="product-img-area">
+        <div class="product-emoji">🍃</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Yerba Mate</div>
+        <div class="product-name">Verdecita</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>5.100</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Verdecita%20500g" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card p-pindare" data-cat="otras" data-name="Pindaré 500g" data-price="5800">
+      <div class="product-img-area">
+        <div class="product-emoji">🌿</div>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">Yerba Mate</div>
+        <div class="product-name">Pindaré</div>
+        <div class="product-weight">500 gramos</div>
+        <div class="product-footer">
+          <div class="product-price"><small>$</small>5.800</div>
+          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Pindar%C3%A9%20500g" target="_blank">💬</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BANNER -->
+<section id="banner">
+  <div class="banner-text reveal">
+    <p class="eyebrow">✦ Hacé tu pedido fácil</p>
+    <h2>Pedí por <em>Instagram</em><br>o WhatsApp</h2>
+    <p>Respondemos rápido y coordinamos la entrega o el retiro del producto. Sin complicaciones, como tiene que ser.</p>
+  </div>
+  <div class="banner-action reveal">
+    <a href="https://www.instagram.com/_yerbas_del_sur/" target="_blank">📲 Seguinos en Instagram</a>
+  </div>
+</section>
+
+<!-- HORARIOS -->
+<section id="horarios">
+  <div class="reveal">
+    <p class="nosotros-label">✦ Cuándo encontrarnos</p>
+    <h2 class="horarios-title">Horarios de<br>atención</h2>
+    <p class="horarios-sub">Estamos disponibles para responder consultas y coordinar pedidos en los siguientes horarios. ¡No dudes en escribirnos!</p>
+    <div class="schedule-items">
+      <div class="schedule-item">
+        <div class="sched-left">
+          <div class="sched-dot"></div>
+          <div class="sched-days">Lunes a Viernes</div>
+        </div>
+        <div class="sched-time">10:00 — 20:00</div>
+      </div>
+      <div class="schedule-item">
+        <div class="sched-left">
+          <div class="sched-dot"></div>
+          <div class="sched-days">Sábados y Domingos</div>
+        </div>
+        <div class="sched-time">14:00 — 19:00</div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-box reveal" style="transition-delay:0.15s">
+    <h3>Contacto directo</h3>
+    <p>Escribinos por cualquiera de estos canales y te respondemos a la brevedad. Rawson, Chubut.</p>
+    <div class="contact-links">
+      <a class="contact-link" href="https://www.instagram.com/_yerbas_del_sur/" target="_blank">
+        <span class="icon">📷</span>
+        @_yerbas_del_sur
+      </a>
+      <a class="contact-link" href="https://wa.me/5492235376372" target="_blank">
+        <span class="icon">💬</span>
+        Consultá por WhatsApp
+      </a>
+      <a class="contact-link" href="https://maps.google.com/?q=Rawson,Chubut" target="_blank">
+        <span class="icon">📍</span>
+        Rawson, Chubut, Patagonia
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="name">🧉 Yerbas del Sur</div>
+      <div class="tagline">Patagonia Argentina</div>
+      <p>Emprendimiento familiar dedicado a acercarte las mejores yerbas mate. Desde Rawson, Chubut, para toda la Patagonia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="irA('nosotros')">Quiénes somos</a></li>
+        <li><a href="javascript:void(0)" onclick="irA('catalogo')">Catálogo</a></li>
+        <li><a href="javascript:void(0)" onclick="irA('horarios')">Horarios</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/_yerbas_del_sur/" target="_blank">Instagram</a></li>
+        <li><a href="https://wa.me/5492235376372" target="_blank">WhatsApp</a></li>
+        <li><a href="javascript:void(0)">Rawson, Chubut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Yerbas del Sur · Todos los derechos reservados</p>
+    <a class="ig-link" href="https://www.instagram.com/_yerbas_del_sur/" target="_blank">📷 @_yerbas_del_sur</a>
+  </div>
+</footer>
+
+<script>
+// Internal scroll helper (avoids conflict with window.scrollTo)
+function irA(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+reveals.forEach(r => obs.observe(r));
+
+// Filter products
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Nav shrink on scroll
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 60) {
+    nav.style.padding = '0.8rem 4rem';
+    nav.style.boxShadow = '0 2px 20px rgba(61,43,31,0.08)';
+  } else {
+    nav.style.padding = '1.2rem 4rem';
+    nav.style.boxShadow = 'none';
+  }
+});
+
+// ===== CART =====
+let cart = {}; // { id: { name, price, emoji, qty } }
+
+function getProductId(card) {
+  return card.dataset.name.replace(/\s+/g, '-');
+}
+
+function addToCart(card) {
+  const name = card.dataset.name;
+  const price = parseInt(card.dataset.price);
+  const emoji = card.querySelector('.product-emoji').textContent.trim();
+  const id = getProductId(card);
+
+  if (cart[id]) {
+    cart[id].qty++;
+  } else {
+    cart[id] = { name, price, emoji, qty: 1 };
+  }
+
+  renderCart();
+  openCart();
+
+  // Bump animation on count
+  const countEl = document.getElementById('cart-count');
+  countEl.classList.remove('bump');
+  void countEl.offsetWidth;
+  countEl.classList.add('bump');
+  setTimeout(() => countEl.classList.remove('bump'), 300);
+
+  // Visual feedback on card
+  card.classList.add('added-to-cart');
+  setTimeout(() => card.classList.remove('added-to-cart'), 900);
+}
+
+function changeQty(id, delta) {
+  if (!cart[id]) return;
+  cart[id].qty += delta;
+  if (cart[id].qty <= 0) delete cart[id];
+  renderCart();
+}
+
+function removeItem(id) {
+  delete cart[id];
+  renderCart();
+}
+
+function clearCart() {
+  if (Object.keys(cart).length === 0) return;
+  if (!confirm('¿Vaciar el carrito?')) return;
+  cart = {};
+  renderCart();
+}
+
+function renderCart() {
+  const items = Object.entries(cart);
+  const countEl = document.getElementById('cart-count');
+  const emptyEl = document.getElementById('cart-empty');
+  const itemsEl = document.getElementById('cart-items');
+  const footerEl = document.getElementById('cart-footer');
+
+  const totalQty = items.reduce((s, [, v]) => s + v.qty, 0);
+  const totalPrice = items.reduce((s, [, v]) => s + v.price * v.qty, 0);
+
+  countEl.textContent = totalQty;
+
+  if (items.length === 0) {
+    emptyEl.style.display = '';
+    itemsEl.innerHTML = '';
+    footerEl.style.display = 'none';
+    return;
+  }
+
+  emptyEl.style.display = 'none';
+  footerEl.style.display = '';
+
+  itemsEl.innerHTML = items.map(([id, item]) => `
+    <div class="cart-item">
+      <div class="cart-item-emoji">${item.emoji}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">$${(item.price * item.qty).toLocaleString('es-AR')}</div>
+      </div>
+      <div class="cart-item-qty">
+        <button class="qty-btn" onclick="changeQty('${id}', -1)">−</button>
+        <span class="qty-num">${item.qty}</span>
+        <button class="qty-btn" onclick="changeQty('${id}', 1)">+</button>
+      </div>
+      <button class="cart-item-remove" onclick="removeItem('${id}')" title="Eliminar">✕</button>
+    </div>
+  `).join('');
+
+  document.getElementById('cart-total').textContent = '$' + totalPrice.toLocaleString('es-AR');
+}
+
+function sendToWhatsApp() {
+  const items = Object.values(cart);
+  if (items.length === 0) return;
+  const lines = items.map(i => `• ${i.qty}x ${i.name} ($${(i.price * i.qty).toLocaleString('es-AR')})`).join('\n');
+  const total = items.reduce((s, i) => s + i.price * i.qty, 0);
+  const msg = `Hola! Quiero hacer el siguiente pedido:\n\n${lines}\n\n*Total estimado: $${total.toLocaleString('es-AR')}*\n\n¿Pueden confirmar disponibilidad y coordinar entrega?`;
+  window.open('https://wa.me/5492235376372?text=' + encodeURIComponent(msg), '_blank');
+}
+
+function openCart() {
+  document.getElementById('cart-drawer').classList.add('open');
+  document.getElementById('cart-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cart-drawer').classList.remove('open');
+  document.getElementById('cart-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleCart() {
+  const drawer = document.getElementById('cart-drawer');
+  if (drawer.classList.contains('open')) closeCart();
+  else openCart();
+}
+</script>
+</body>
+</html>

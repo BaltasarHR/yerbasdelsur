@@ -505,7 +505,6 @@ nav {
   cursor: pointer;
 }
 .product-card:hover { transform: translateY(-6px); z-index: 2; box-shadow: 0 20px 50px rgba(30,61,47,0.15); }
-.product-card:hover .product-overlay { opacity: 1; }
 .product-card:hover .product-img-area { transform: scale(1.04); }
 
 .product-img-area {
@@ -535,27 +534,7 @@ nav {
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
 }
 
-.product-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(30,61,47,0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.overlay-btn {
-  font-size: 0.6rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: white;
-  border: 1.5px solid rgba(255,255,255,0.5);
-  padding: 0.8rem 1.5rem;
-  transition: all 0.3s;
-}
-.overlay-btn:hover { background: white; color: var(--green-dark); }
+
 
 .product-body {
   padding: 1.5rem;
@@ -606,18 +585,21 @@ nav {
   font-weight: 400;
   color: var(--muted);
 }
-.whatsapp-btn {
-  width: 36px; height: 36px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+.add-to-cart-btn {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: var(--green);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  transition: background 0.25s;
+  white-space: nowrap;
 }
-.whatsapp-btn:hover { transform: scale(1.15); box-shadow: 0 4px 14px rgba(37,211,102,0.4); }
+.add-to-cart-btn:hover { background: var(--green-dark); }
 
 /* ===== BANNER ===== */
 #banner {
@@ -1272,144 +1254,120 @@ footer {
     <div class="product-card p-canarias" data-cat="otras" data-name="Canarias 500g" data-price="6600">
       <div class="product-img-area">
         <div class="product-emoji">🟡</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Yerba Mate</div>
         <div class="product-name">Canarias</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>6.600</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Canarias%20500g" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-baldo" data-cat="otras" data-name="Baldo 500g" data-price="7800">
       <div class="product-img-area">
         <div class="product-emoji">🟢</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Yerba Mate</div>
         <div class="product-name">Baldo</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>7.800</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Baldo%20500g" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-sara" data-cat="otras" data-name="Sara Original 500g" data-price="8500">
       <div class="product-img-area">
         <div class="product-emoji">🔵</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Yerba Mate · Extra Suave</div>
         <div class="product-name">Sara Original</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>8.500</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Sara%20Original%20500g" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-rv-clasica" data-cat="rey-verde" data-name="Rey Verde Clásica 500g" data-price="5500">
       <div class="product-img-area">
         <div class="product-emoji">⚪</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Rey Verde Export</div>
         <div class="product-name">Clásica</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>5.500</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Rey%20Verde%20Clasica" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-rv-tradicional" data-cat="rey-verde" data-name="Rey Verde Tradicional 500g" data-price="5700">
       <div class="product-img-area">
         <div class="product-emoji">🟡</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Rey Verde Export</div>
         <div class="product-name">Tradicional</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>5.700</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Rey%20Verde%20Tradicional" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-rv-premium" data-cat="rey-verde" data-name="Rey Verde Premium 500g" data-price="7000">
       <div class="product-img-area">
         <div class="product-emoji">⬛</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Rey Verde Export</div>
         <div class="product-name">Premium</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>7.000</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Rey%20Verde%20Premium" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-verdecita" data-cat="otras" data-name="Verdecita 500g" data-price="5100">
       <div class="product-img-area">
         <div class="product-emoji">🍃</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Yerba Mate</div>
         <div class="product-name">Verdecita</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>5.100</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Verdecita%20500g" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
     <div class="product-card p-pindare" data-cat="otras" data-name="Pindaré 500g" data-price="5800">
       <div class="product-img-area">
         <div class="product-emoji">🌿</div>
-        <div class="product-overlay">
-          <button class="overlay-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-        </div>
-      </div>
+</div>
       <div class="product-body">
         <div class="product-brand">Yerba Mate</div>
         <div class="product-name">Pindaré</div>
         <div class="product-weight">500 gramos</div>
         <div class="product-footer">
           <div class="product-price"><small>$</small>5.800</div>
-          <a class="whatsapp-btn" href="https://wa.me/5492235376372?text=Hola!%20Quiero%20Pindar%C3%A9%20500g" target="_blank">💬</a>
-        </div>
+          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+          </div>
       </div>
     </div>
 
@@ -1589,9 +1547,26 @@ function removeItem(id) {
 
 function clearCart() {
   if (Object.keys(cart).length === 0) return;
-  if (!confirm('¿Vaciar el carrito?')) return;
-  cart = {};
-  renderCart();
+  const btn = document.querySelector('.cart-clear-btn');
+  if (btn.dataset.confirming === 'true') {
+    cart = {};
+    renderCart();
+    btn.dataset.confirming = 'false';
+    btn.textContent = '🗑️ Vaciar carrito';
+  } else {
+    btn.dataset.confirming = 'true';
+    btn.textContent = '¿Seguro? Tocá de nuevo';
+    btn.style.borderColor = '#b33';
+    btn.style.color = '#b33';
+    setTimeout(() => {
+      if (btn.dataset.confirming === 'true') {
+        btn.dataset.confirming = 'false';
+        btn.textContent = '🗑️ Vaciar carrito';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+      }
+    }, 3000);
+  }
 }
 
 function renderCart() {

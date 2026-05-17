@@ -1250,127 +1250,7 @@ footer {
   </div>
 
   <div class="products-grid reveal" id="products-grid">
-
-    <div class="product-card p-canarias" data-cat="otras" data-name="Canarias 500g" data-price="6600">
-      <div class="product-img-area">
-        <div class="product-emoji">🟡</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Yerba Mate</div>
-        <div class="product-name">Canarias</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>6.600</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-baldo" data-cat="otras" data-name="Baldo 500g" data-price="7800">
-      <div class="product-img-area">
-        <div class="product-emoji">🟢</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Yerba Mate</div>
-        <div class="product-name">Baldo</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>7.800</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-sara" data-cat="otras" data-name="Sara Original 500g" data-price="8500">
-      <div class="product-img-area">
-        <div class="product-emoji">🔵</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Yerba Mate · Extra Suave</div>
-        <div class="product-name">Sara Original</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>8.500</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-rv-clasica" data-cat="rey-verde" data-name="Rey Verde Clásica 500g" data-price="5500">
-      <div class="product-img-area">
-        <div class="product-emoji">⚪</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Rey Verde Export</div>
-        <div class="product-name">Clásica</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>5.500</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-rv-tradicional" data-cat="rey-verde" data-name="Rey Verde Tradicional 500g" data-price="5700">
-      <div class="product-img-area">
-        <div class="product-emoji">🟡</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Rey Verde Export</div>
-        <div class="product-name">Tradicional</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>5.700</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-rv-premium" data-cat="rey-verde" data-name="Rey Verde Premium 500g" data-price="7000">
-      <div class="product-img-area">
-        <div class="product-emoji">⬛</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Rey Verde Export</div>
-        <div class="product-name">Premium</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>7.000</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-verdecita" data-cat="otras" data-name="Verdecita 500g" data-price="5100">
-      <div class="product-img-area">
-        <div class="product-emoji">🍃</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Yerba Mate</div>
-        <div class="product-name">Verdecita</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>5.100</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
-    <div class="product-card p-pindare" data-cat="otras" data-name="Pindaré 500g" data-price="5800">
-      <div class="product-img-area">
-        <div class="product-emoji">🌿</div>
-</div>
-      <div class="product-body">
-        <div class="product-brand">Yerba Mate</div>
-        <div class="product-name">Pindaré</div>
-        <div class="product-weight">500 gramos</div>
-        <div class="product-footer">
-          <div class="product-price"><small>$</small>5.800</div>
-          <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
-          </div>
-      </div>
-    </div>
-
+    <div class="loading-products" id="loading-products" style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-size:0.9rem;">Cargando productos...</div>
   </div>
 </section>
 
@@ -1473,6 +1353,91 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 reveals.forEach(r => obs.observe(r));
+
+// ===== GOOGLE SHEETS INTEGRATION =====
+// Reemplazá este ID con el de tu Google Sheet (está en la URL del Sheets)
+const SHEET_ID = '1aj_y1BcP5PLHgKCAJSUc60brslXNCrBdqrV6bnCOQLw';
+const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=Productos`;
+
+// Colores por marca (se pueden ampliar)
+const brandColors = {
+  'canarias':     'linear-gradient(135deg, #f5e840 0%, #d4c820 100%)',
+  'baldo':        'linear-gradient(135deg, #1a6b2a 0%, #0d3d16 100%)',
+  'sara':         'linear-gradient(135deg, #1a2d8a 0%, #0d1a5a 100%)',
+  'rey verde':    'linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%)',
+  'verdecita':    'linear-gradient(135deg, #5aad40 0%, #2a6a18 100%)',
+  'pindaré':      'linear-gradient(135deg, #e8e820 0%, #b0b010 100%)',
+  'pindare':      'linear-gradient(135deg, #e8e820 0%, #b0b010 100%)',
+};
+
+function getBrandColor(nombre) {
+  const n = nombre.toLowerCase();
+  for (const [key, val] of Object.entries(brandColors)) {
+    if (n.includes(key)) return val;
+  }
+  return 'linear-gradient(135deg, #4a7c5a 0%, #1e3d2f 100%)';
+}
+
+async function cargarProductos() {
+  const grid = document.getElementById('products-grid');
+  try {
+    const res = await fetch(SHEET_URL);
+    const text = await res.text();
+    // Google devuelve JSONP, extraemos el JSON
+    const json = JSON.parse(text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\)/)[1]);
+    const rows = json.table.rows;
+
+    if (!rows || rows.length === 0) {
+      grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted)">No hay productos disponibles.</p>';
+      return;
+    }
+
+    // Columnas esperadas: Marca | Nombre | Peso | Precio | Categoria | Emoji | Disponible
+    const productos = rows
+      .map(r => ({
+        marca:       r.c[0]?.v || '',
+        nombre:      r.c[1]?.v || '',
+        peso:        r.c[2]?.v || '',
+        precio:      parseInt(r.c[3]?.v) || 0,
+        categoria:   (r.c[4]?.v || 'otras').toLowerCase().replace(/ /g,'-'),
+        emoji:       r.c[5]?.v || '🧉',
+        disponible:  (r.c[6]?.v || 'si').toString().toLowerCase(),
+      }))
+      .filter(p => p.disponible !== 'no' && p.disponible !== 'false');
+
+    grid.innerHTML = productos.map(p => {
+      const id = (p.nombre + p.peso).replace(/\s+/g, '-').toLowerCase();
+      const nombreCompleto = `${p.nombre} ${p.peso}`;
+      const precioFormateado = p.precio.toLocaleString('es-AR');
+      const bgColor = getBrandColor(p.nombre + ' ' + p.marca);
+      return `
+        <div class="product-card" data-cat="${p.categoria}" data-name="${nombreCompleto}" data-price="${p.precio}">
+          <div class="product-img-area" style="background:${bgColor}">
+            <div class="product-emoji">${p.emoji}</div>
+          </div>
+          <div class="product-body">
+            <div class="product-brand">${p.marca}</div>
+            <div class="product-name">${p.nombre}</div>
+            <div class="product-weight">${p.peso}</div>
+            <div class="product-footer">
+              <div class="product-price"><small>$</small>${precioFormateado}</div>
+              <button class="add-to-cart-btn" onclick="addToCart(this.closest('.product-card'))">+ Agregar</button>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+
+    // Re-observar los reveal
+    document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+  } catch (e) {
+    console.error('Error cargando productos:', e);
+    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted)">Error al cargar productos. Revisá la conexión con Google Sheets.</p>';
+  }
+}
+
+// Cargar productos al iniciar
+cargarProductos();
 
 // Filter products
 function filterProducts(cat, btn) {
